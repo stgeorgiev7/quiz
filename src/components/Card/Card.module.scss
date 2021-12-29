@@ -1,0 +1,44 @@
+@import url("https://use.typekit.net/sly1ocm.css");
+$font-stack: laca, sans-serif;
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background-color: #0C4BFA;
+    padding-bottom: 300px;
+}
+
+.cardContent {
+    width: 45rem;
+    margin-top: 150px; // towa trqbwa da se promeni zadyljitelno
+    padding-bottom: 10px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.title {
+    padding: 10px 10px 0;
+    font-family: laca, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.exp {
+    padding: 0 10px 0;
+    font-family: laca, sans-serif;
+    font-weight: 800;
+    color: #0C4BFA;
+    font-style: normal;
+}
+
+
+.code {
+    padding: 0 20px 0 !important;
+    color: rgb(4, 35, 94) !important;
+}
+
+
+

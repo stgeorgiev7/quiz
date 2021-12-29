@@ -1,0 +1,19 @@
+@import url("https://use.typekit.net/sly1ocm.css");
+$font-stack: laca, sans-serif;
+
+.container {
+    text-align: center;
+   background-color:#0C4BFA;
+}
+
+.exp, .total {
+    font-family: laca, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white; 
+}
+
+.total {
+    font-weight: 400;
+    font-size: 14px;
+}

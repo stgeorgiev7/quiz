@@ -1,0 +1,20 @@
+@import url("https://use.typekit.net/sly1ocm.css");
+$font-stack: laca, sans-serif;
+
+.container {
+    text-align: center;
+    display: block;
+    background-color: #0C4BFA;;
+}
+
+.counter, .questions {
+    font-family: laca, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white; 
+}
+
+.questions{
+    font-weight: 500;
+    font-size: 14px;
+}

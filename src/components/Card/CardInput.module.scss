@@ -1,0 +1,31 @@
+@import url("https://use.typekit.net/sly1ocm.css");
+$font-stack: laca, sans-serif;
+
+.wrapper {
+    border: 2px solid #0C4BFA;
+    border-radius: 30px;
+    margin-top: 20px;
+};
+
+.input {
+    padding: 3px 20px 0px;
+    font-family: laca, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    ::placeholder {
+        font-family: laca, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 14px;
+    }
+    
+};
+
+
+.submit{
+    font-family: laca, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9px;
+}
