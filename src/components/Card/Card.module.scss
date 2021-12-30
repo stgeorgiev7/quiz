@@ -7,7 +7,7 @@ $font-stack: laca, sans-serif;
     align-self: center;
     width: 100%;
     padding-bottom: 550px;
-    transition: background .50s ease-out
+    transition: background .50s ease-out;
 }
 
 .cardContent {
@@ -16,6 +16,7 @@ $font-stack: laca, sans-serif;
     padding-bottom: 10px;
     border-radius: 25px;
     background-color: white;
+
 }
 
 .title {
@@ -51,6 +52,16 @@ $font-stack: laca, sans-serif;
     font-size: 40px;
     justify-content: center;
     align-self: center;
+}
+
+@keyframes card-load {
+    0% {
+        transform: scalse(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 

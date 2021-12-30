@@ -16,6 +16,7 @@ export default function Cards({
   correct,
   correctCount,
 }) {
+  const { motion } = require("framer-motion");
   const [wrong, setWrong] = useState(0);
   const [showCorrectAnswer, setCorrectAnswer] = useState("none");
   const [showWrongAnswer, setWrongAnswer] = useState("none");
@@ -30,20 +31,33 @@ export default function Cards({
 
   const [cardcolor, setCardColor] = useState(colors.default);
 
+  const containerVariants={
+    hidden: {
+      opacity: 0,
+      y: 300
+    }, visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        delay: 0.5,
+        times: 10
+      }
+    }
+  }
+
   useEffect(() => {
-    if(isFirstRender.current) {
+    if (isFirstRender.current) {
       return;
     } else {
       setCardColor(colors.fail);
-    setWrongAnswer("flex");
+      setWrongAnswer("flex");
 
-    setTimeout(() => {
-      setCardColor(colors.default);
-      setWrongAnswer("none");
-    }, 800);
-
+      setTimeout(() => {
+        setCardColor(colors.default);
+        setWrongAnswer("none");
+      }, 800);
     }
-    
   }, [wrong]);
 
   useEffect(() => {
@@ -66,7 +80,13 @@ export default function Cards({
         className={classNames(styles.card)}
         sx={{ backgroundColor: `${cardcolor}` }}
       >
-        <CardContent className={classNames(styles.cardContent)}>
+        <CardContent
+          className={classNames(styles.cardContent)}
+          component={motion.div}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <Typography className={classNames(styles.title)}>
             {cards[id]?.title}
           </Typography>
