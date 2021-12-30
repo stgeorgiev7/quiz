@@ -16,8 +16,11 @@ export default function Cards({
   correct,
   correctCount,
 }) {
-
   const [wrong, setWrong] = useState(0);
+  const [showCorrectAnswer, setCorrectAnswer] = useState("none");
+  const [showWrongAnswer, setWrongAnswer] = useState("none");
+
+  const isFirstRender = useRef(true);
 
   const colors = {
     default: "#0C4BFA",
@@ -26,25 +29,36 @@ export default function Cards({
   };
 
   const [cardcolor, setCardColor] = useState(colors.default);
-  const isMounted = useRef(false);
 
   useEffect(() => {
-    setCardColor(colors.success);
+    if(isFirstRender.current) {
+      return;
+    } else {
+      setCardColor(colors.fail);
+    setWrongAnswer("flex");
 
     setTimeout(() => {
       setCardColor(colors.default);
-    }, 500);
+      setWrongAnswer("none");
+    }, 800);
 
-  }, [correctCount]);
-
-  useEffect(() => {
-    setCardColor(colors.fail);
-
-    setTimeout(() => {
-      setCardColor(colors.default);
-    }, 500);
-
+    }
+    
   }, [wrong]);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    } else {
+      setCardColor(colors.success);
+      setCorrectAnswer("flex");
+      setTimeout(() => {
+        setCardColor(colors.default);
+        setCorrectAnswer("none");
+      }, 800);
+    }
+  }, [correctCount]);
 
   return (
     <div>
@@ -99,6 +113,20 @@ export default function Cards({
           )}
         </CardContent>
       </CardContainer>
+
+      <Typography
+        sx={{ display: showCorrectAnswer }}
+        className={classNames(styles.correctNotification)}
+      >
+        CORRECT ANSWER!
+      </Typography>
+
+      <Typography
+        sx={{ display: showWrongAnswer }}
+        className={classNames(styles.wrongtNotification)}
+      >
+        WRONG ANSWER!
+      </Typography>
     </div>
   );
 }

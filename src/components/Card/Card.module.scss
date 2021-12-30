@@ -6,7 +6,7 @@ $font-stack: laca, sans-serif;
     justify-content: center;
     align-self: center;
     width: 100%;
-    padding-bottom: 300px;
+    padding-bottom: 550px;
     transition: background .50s ease-out
 }
 
@@ -38,6 +38,19 @@ $font-stack: laca, sans-serif;
 .code {
     padding: 0 20px 0 !important;
     color: rgb(4, 35, 94) !important;
+}
+
+.correctNotification, .wrongtNotification {
+    position: relative;
+    bottom: 320px;
+    background: transparent;
+    transition: background .50s ease-out;
+    font-family: laca, sans-serif;
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
+    justify-content: center;
+    align-self: center;
 }
 
 

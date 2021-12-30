@@ -19,13 +19,11 @@ export default function CardButtons({
   function handleClick(e) {
     e.preventDefault();
     if (e.target.value == correctAnswer) {
-      alert("Correct Answer!");
       correct(correctCount + 1);
       boost(crrExp + cardExp);
       next(crrId + 1);
     } else {
       wrongCount(wrong + 1);
-      alert("Wrong Answer");
       next(crrId + 1);
     }
   }

@@ -25,13 +25,11 @@ export default function CardInput({
     e.preventDefault();
 
     if (currentAnswer === correctAnswer) {
-      // alert(`Correct Answer!`);
       correct(correctCount + 1);
       next(crrId + 1);
       boost(crrExp + cardExp);
     } else {
       wrongCount(wrong + 1);
-      alert(`Wrong answer!`);
       next(crrId + 1);
     }
   }
