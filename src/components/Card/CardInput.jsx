@@ -9,25 +9,30 @@ export default function CardInput({
   cardExp,
   boost,
   crrId,
+  crrExp,
+  correct,
+  correctCount,
+  wrong,
+  wrongCount
 }) {
   const [currentAnswer, setAnswer] = useState("");
 
   function handleAnswer(e) {
     setAnswer(e.target.value);
-  };
-
-  console.log(currentAnswer)
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
 
     if (currentAnswer === correctAnswer) {
-      alert(`Correct Answer!`);
-      next(crrId+1);
-      boost(+cardExp);
+      // alert(`Correct Answer!`);
+      correct(correctCount + 1);
+      next(crrId + 1);
+      boost(crrExp + cardExp);
     } else {
+      wrongCount(wrong + 1);
       alert(`Wrong answer!`);
-      next(crrId+1);
+      next(crrId + 1);
     }
   }
 

@@ -9,7 +9,7 @@ export default function Header({ id, expirience }) {
   return (
     <Grid container
     justifyContent="center"
-    gap={24}
+    gap={20}
     className={classNames(styles.gridContainer)}>
       <Grid item>
         <QuestionCount id={id} />
