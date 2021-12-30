@@ -1,0 +1,32 @@
+@import url("https://use.typekit.net/sly1ocm.css");
+$font-stack: laca, sans-serif;
+
+.container {
+    background-color: #0C4BFA;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+};
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: laca, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white; 
+}
+
+.button {
+    display: flex;
+    justify-content: center !important;
+    align-self: center;
+    font-family: laca, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    color: white; 
+    border-radius: 20px;
+
+}
