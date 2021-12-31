@@ -16,7 +16,6 @@ $font-stack: laca, sans-serif;
     padding-bottom: 10px;
     border-radius: 25px;
     background-color: white;
-
 }
 
 .title {
@@ -35,7 +34,6 @@ $font-stack: laca, sans-serif;
     font-style: normal;
 }
 
-
 .code {
     padding: 0 20px 0 !important;
     color: rgb(4, 35, 94) !important;
@@ -52,16 +50,6 @@ $font-stack: laca, sans-serif;
     font-size: 40px;
     justify-content: center;
     align-self: center;
-}
-
-@keyframes card-load {
-    0% {
-        transform: scalse(0);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 

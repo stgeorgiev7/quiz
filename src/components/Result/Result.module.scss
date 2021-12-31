@@ -1,0 +1,44 @@
+@import url("https://use.typekit.net/sly1ocm.css");
+$font-stack: laca, sans-serif;
+
+.container {
+    background-color: #0C4BFA;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+};
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: laca, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white; 
+}
+
+.score {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    font-family: laca, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #0C4BFA;; 
+    align-self: center;
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+
+
+}
+
+.description {
+    text-align: center;
+    font-size: 16px;
+}
+

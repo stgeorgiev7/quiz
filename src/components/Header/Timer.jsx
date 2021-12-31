@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Countdown, { zeroPad } from "react-countdown";
 import { Typography } from "@mui/material";
 
-export default function Timer() {
+export default function Timer({timeOut}) {
   const getLocalStorageValue = (s) => localStorage.getItem(s);
   const [time, setTime] = useState({ date: Date.now(), delay: 150000 });
 
@@ -51,6 +51,7 @@ export default function Timer() {
           onComplete={() => {
             if (localStorage.getItem("time_end") !== null) {
               localStorage.removeItem("time_end");
+              timeOut(true);
             }
           }}
         />

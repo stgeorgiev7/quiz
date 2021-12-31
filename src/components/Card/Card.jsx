@@ -6,6 +6,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import CardInput from "./CardInput";
 import CardButtons from "./CardButtons";
+import Result from "../Result/Result"
 
 export default function Cards({
   cards,
@@ -15,6 +16,7 @@ export default function Cards({
   crrExp,
   correct,
   correctCount,
+  timeOut
 }) {
   const { motion } = require("framer-motion");
   const [wrong, setWrong] = useState(0);
@@ -147,6 +149,7 @@ export default function Cards({
       >
         WRONG ANSWER!
       </Typography>
+      {id > 10  || timeOut ? <Result correctAnswers={correctCount}/> : <div />}
     </div>
   );
 }

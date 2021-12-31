@@ -5,7 +5,7 @@ import QuestionCount from "./QuestionCount";
 import Timer from "./Timer";
 import Expirience from "./Expirience";
 
-export default function Header({ id, expirience }) {
+export default function Header({ id, expirience, time }) {
   return (
     <Grid container
     justifyContent="center"
@@ -16,7 +16,7 @@ export default function Header({ id, expirience }) {
       </Grid>
 
       <Grid item>
-          <Timer />
+          <Timer timeOut={time}/>
       </Grid>
 
       <Grid item>
