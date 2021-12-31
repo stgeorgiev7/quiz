@@ -1,6 +1,6 @@
 import styles from "./Result.module.scss";
 import classNames from "classnames";
-import { Typography, Button } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function Result({ correctAnswers }) {
   const { motion } = require("framer-motion");
@@ -21,7 +21,7 @@ export default function Result({ correctAnswers }) {
   };
 
   return (
-    <div className={classNames(styles.container)} sx={{display:"none"}}>
+    <div className={classNames(styles.container)} sx={{ display: "none" }}>
       <Typography
         variant="h1"
         className={classNames(styles.title)}

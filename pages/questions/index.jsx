@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import classNames from "classnames";
 import Card from "../../src/components/Card/Card";
 import Header from "../../src/components/Header/Header";
-import Result from "../../src/components/Result/Result";
 
 export default function Questions() {
   const [cardQuestions, setCard] = useState([]);
